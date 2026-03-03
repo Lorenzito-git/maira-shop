@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
+/* MAIRA barevný systém */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #073028; /* hlavní tmavá */
+  --foreground: #f2f5f4; /* hlavní text */
+  --maira-orange: #FF4A20;
+  --maira-muted: #A7B4B1;
+  --maira-card: #0B3A31;
+  --maira-border: rgba(255,255,255,.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Základ */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Jemný scroll */
+* {
+  box-sizing: border-box;
+}
+
+/* Hover efekty */
+a {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.85;
 }
